@@ -24,12 +24,14 @@
     <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main class="login-main">
 
-        <section class="login-container">
+        <section class="login-card">
 
-            <h1>ClubManager</h1>
-            <p class="login-subtitle">Sistema de Gestão de Clube Desportivo</p>
+            <div class="login-card__header">
+                <h1>Bem-vindo</h1>
+                <p>Inicie sessão para continuar</p>
+            </div>
 
-            <form class="form" action="#" method="post">
+            <form class="login-form" action="#" method="post">
 
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -56,13 +58,15 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">
-                    Entrar
-                </button>
+                <!-- Botão + Link na mesma linha -->
+                <div class="login-actions">
+                    <button type="submit" class="btn-login">
+                        Entrar
+                    </button>
+                    <a href="#" class="login-link">Esqueci a senha</a>
+                </div>
 
             </form>
-
-            <a href="#" class="link">Esqueci a minha senha</a>
 
         </section>
 

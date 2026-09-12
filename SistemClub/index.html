@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubManager — Login</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body class="login-page">
+
+    <!-- ===== HEADER — LOGÓTIPO DO SITE ===== -->
+    <header class="login-header">
+        <img src="assets/images/278238083225297007.jpg" alt="ClubManager" class="login-header__logo"
+            onerror="this.style.display='none'">
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="login-main">
+
+        <section class="login-container">
+
+            <h1>ClubManager</h1>
+            <p class="login-subtitle">Sistema de Gestão de Clube Desportivo</p>
+
+            <form class="form" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="o.teu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Palavra-passe</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="entidade">Entidade</label>
+                    <select id="entidade" name="entidade" required>
+                        <option value="">-- Selecione o perfil --</option>
+                        <option value="admin">Administrador</option>
+                        <option value="presidente">Presidente</option>
+                        <option value="treinador">Treinador</option>
+                        <option value="tesoureiro">Tesoureiro</option>
+                        <option value="secretario">Secretário</option>
+                        <option value="disciplina">Responsável da Disciplina</option>
+                        <option value="jogador">Jogador</option>
+                        <option value="apoiante">Membro Apoiante</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    Entrar
+                </button>
+
+            </form>
+
+            <a href="#" class="link">Esqueci a minha senha</a>
+
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="login-footer">
+        <p>© 2025 ClubManager — Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

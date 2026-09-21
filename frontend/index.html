@@ -15,24 +15,19 @@
 
 <body class="login-page">
 
-    <!-- ===== HEADER — LOGÓTIPO DO SITE ===== -->
     <header class="login-header">
         <img src="assets/images/278238083225297007.jpg" alt="ClubManager" class="login-header__logo"
             onerror="this.style.display='none'">
     </header>
 
-    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main class="login-main">
-
         <section class="login-card">
-
             <div class="login-card__header">
                 <h1>Bem-vindo</h1>
                 <p>Inicie sessão para continuar</p>
             </div>
 
-            <form class="login-form" action="#" method="get">
-
+            <form class="login-form" id="login-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="o.teu@email.com" required>
@@ -43,40 +38,19 @@
                     <input type="password" id="password" name="password" placeholder="••••••••" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="entidade">Entidade</label>
-                    <select id="entidade" name="entidade" required>
-                        <option value="">-- Selecione o perfil --</option>
-                        <option value="admin">Administrador</option>
-                        <option value="presidente">Presidente</option>
-                        <option value="treinador">Treinador</option>
-                        <option value="tesoureiro">Tesoureiro</option>
-                        <option value="secretario">Secretário</option>
-                        <option value="disciplina">Responsável da Disciplina</option>
-                        <option value="jogador">Jogador</option>
-                        <option value="apoiante">Membro Apoiante</option>
-                    </select>
-                </div>
-
-                <!-- Botão + Link na mesma linha -->
                 <div class="login-actions">
-                    <button type="submit" class="btn-login">
-                        Entrar
-                    </button>
+                    <button type="submit" class="btn-login">Entrar</button>
                     <a href="#" class="login-link">Esqueci a senha</a>
                 </div>
-
             </form>
-
         </section>
-
     </main>
 
-    <!-- ===== RODAPÉ ===== -->
     <footer class="login-footer">
         <p>© 2025 ClubManager — Todos os direitos reservados.</p>
     </footer>
 
+    <script type="module" src="js/pages/login.js"></script>
 </body>
 
 </html>

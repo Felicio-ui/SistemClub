@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubManager — Dashboard do Administrador</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Header e Sidebar injetados via JS -->
+    <div id="app-header"></div>
+    <div id="app-sidebar"></div>
+
+    <main class="app-main">
+
+        <!-- ===== Título da página ===== -->
+        <div class="page-header">
+            <div>
+                <h1 class="app-main__title">Dashboard do Administrador</h1>
+                <p class="app-main__subtitle">Visão geral da plataforma ClubManager</p>
+            </div>
+            <div class="page-header__actions">
+                <span class="page-header__date" id="data-hoje">—</span>
+            </div>
+        </div>
+
+        <!-- ===== Cards de resumo ===== -->
+        <section class="dashboard-grid">
+
+            <div class="stat-card stat-card--primary">
+                <div class="stat-card__icon">🏟️</div>
+                <div class="stat-card__content">
+                    <p class="stat-card__label">Total de Clubes</p>
+                    <p class="stat-card__value" id="total-clubes">—</p>
+                </div>
+            </div>
+
+            <div class="stat-card stat-card--success">
+                <div class="stat-card__icon">✅</div>
+                <div class="stat-card__content">
+                    <p class="stat-card__label">Clubes Ativos</p>
+                    <p class="stat-card__value" id="clubes-ativos">—</p>
+                </div>
+            </div>
+
+            <div class="stat-card stat-card--warning">
+                <div class="stat-card__icon">⏸️</div>
+                <div class="stat-card__content">
+                    <p class="stat-card__label">Clubes Inativos</p>
+                    <p class="stat-card__value" id="clubes-inativos">—</p>
+                </div>
+            </div>
+
+            <div class="stat-card stat-card--info">
+                <div class="stat-card__icon">👤</div>
+                <div class="stat-card__content">
+                    <p class="stat-card__label">Administradores</p>
+                    <p class="stat-card__value" id="total-admins">—</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== Ações rápidas ===== -->
+        <section class="card">
+            <h2 class="card__title">Ações Rápidas</h2>
+
+            <div class="quick-actions">
+                <a href="../pages/clubes/registar.html" class="quick-action">
+                    <span class="quick-action__icon">➕</span>
+                    <span class="quick-action__label">Registar Clube</span>
+                    <span class="quick-action__desc">Adicionar um novo clube à plataforma</span>
+                </a>
+
+                <a href="../pages/clubes/lista.html" class="quick-action">
+                    <span class="quick-action__icon">📋</span>
+                    <span class="quick-action__label">Ver Clubes</span>
+                    <span class="quick-action__desc">Lista de todos os clubes registados</span>
+                </a>
+
+                <a href="../pages/admins/lista.html" class="quick-action">
+                    <span class="quick-action__icon">👤</span>
+                    <span class="quick-action__label">Administradores</span>
+                    <span class="quick-action__desc">Gerir administradores da plataforma</span>
+                </a>
+
+                <a href="../pages/logs/lista.html" class="quick-action">
+                    <span class="quick-action__icon">📄</span>
+                    <span class="quick-action__label">Logs de Auditoria</span>
+                    <span class="quick-action__desc">Histórico de ações no sistema</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== Últimos clubes ===== -->
+        <section class="card">
+            <div class="card__header">
+                <h2 class="card__title">Últimos Clubes Registados</h2>
+                <a href="../pages/clubes/lista.html" class="btn btn-outline btn-sm">Ver Todos</a>
+            </div>
+
+            <table class="table" id="tabela-clubes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sigla</th>
+                        <th>Estado</th>
+                        <th>Data de Registo</th>
+                        <th class="text-right">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-center">A carregar...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/pages/admin.js"></script>
+</body>
+
+</html>

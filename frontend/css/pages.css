@@ -14,7 +14,6 @@
   min-height: 100vh;
 }
 
-/* Overlay escuro para melhorar legibilidade */
 .dashboard-page::before {
   content: "";
   position: fixed;
@@ -28,7 +27,7 @@
 }
 
 /* ============================================================
-   2. HEADER MAIOR E MAIS IMPONENTE
+   2. HEADER MAIOR E IMPONENTE
    ============================================================ */
 .dashboard-page .app-header {
   height: 80px;
@@ -65,7 +64,9 @@
   border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
-/* Sidebar transparente */
+/* ============================================================
+   3. SIDEBAR TRANSPARENTE
+   ============================================================ */
 .dashboard-page .app-sidebar {
   background-color: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(16px);
@@ -93,7 +94,7 @@
 }
 
 /* ============================================================
-   3. CONTEÚDO PRINCIPAL — AJUSTES DE ESPAÇO
+   4. CONTEÚDO PRINCIPAL
    ============================================================ */
 .dashboard-page .app-main {
   padding: 32px 40px;
@@ -101,7 +102,7 @@
 }
 
 /* ============================================================
-   4. PAGE HEADER (Título + Data)
+   5. PAGE HEADER (Título + Data)
    ============================================================ */
 .page-header {
   display: flex;
@@ -149,7 +150,7 @@
 }
 
 /* ============================================================
-   5. CARDS DE RESUMO (STAT CARDS) — TRANSPARENTES
+   6. CARDS DE RESUMO (MUITO TRANSPARENTES)
    ============================================================ */
 .dashboard-grid {
   display: grid;
@@ -163,17 +164,15 @@
   align-items: center;
   gap: 18px;
 
-  /* Transparência real — vidro fosco */
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 
-  /* Borda sutil */
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
 
   padding: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -196,9 +195,9 @@
 
 .stat-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.13);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .stat-card__icon {
@@ -208,8 +207,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
   flex-shrink: 0;
 }
@@ -237,20 +236,19 @@
 }
 
 /* ============================================================
-   6. CARDS NORMAIS — TRANSPARENTES
+   7. CARDS NORMAIS (MUITO TRANSPARENTES)
    ============================================================ */
 .card {
-  /* Vidro fosco */
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
 
   padding: 28px;
   margin-bottom: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .card__header {
@@ -277,7 +275,7 @@
 }
 
 /* ============================================================
-   7. AÇÕES RÁPIDAS — TRANSPARENTES
+   8. AÇÕES RÁPIDAS (TRANSPARENTES)
    ============================================================ */
 .quick-actions {
   display: grid;
@@ -291,11 +289,10 @@
   gap: 8px;
   padding: 24px;
 
-  /* Transparente */
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
 
   transition: all 0.25s ease;
@@ -306,7 +303,7 @@
 }
 
 .quick-action:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   border-color: rgba(96, 165, 250, 0.5);
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
@@ -332,7 +329,7 @@
 }
 
 /* ============================================================
-   8. TABELA NO DASHBOARD
+   9. TABELA NO DASHBOARD
    ============================================================ */
 .dashboard-page .table {
   background-color: transparent;
@@ -340,11 +337,12 @@
 }
 
 .dashboard-page .table th {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 12px;
   letter-spacing: 1px;
+  padding: 14px 16px;
 }
 
 .dashboard-page .table td {
@@ -362,7 +360,7 @@
   border-bottom: none;
 }
 
-/* Badges no dashboard */
+/* Badges */
 .dashboard-page .badge {
   padding: 4px 12px;
   font-size: 12px;
@@ -388,26 +386,61 @@
   border: 1px solid rgba(252, 211, 77, 0.3);
 }
 
-/* Botões no dashboard */
+/* Botão outline no dashboard */
 .dashboard-page .btn-outline {
   border-color: rgba(255, 255, 255, 0.3);
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .dashboard-page .btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ============================================================
-   9. UTILITÁRIOS
+   10. BOTÃO SAIR (VERMELHO)
+   ============================================================ */
+.dashboard-page .btn-sair,
+.btn-sair {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.dashboard-page .btn-sair:hover,
+.btn-sair:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.45);
+}
+
+.dashboard-page .btn-sair:active,
+.btn-sair:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+/* ============================================================
+   11. UTILITÁRIOS
    ============================================================ */
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 .text-left   { text-align: left; }
 
 /* ============================================================
-   10. RESPONSIVIDADE
+   12. RESPONSIVIDADE
    ============================================================ */
 @media (max-width: 992px) {
   .dashboard-page .app-main {
@@ -454,4 +487,230 @@
   .card {
     padding: 20px;
   }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ============================================================
+   TABELA — TOOLBAR, PESQUISA E AÇÕES
+   ============================================================ */
+
+/* Toolbar acima da tabela */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 16px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 480px;
+  transition: all 0.2s;
+}
+
+.search-bar:focus-within {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.search-bar__icon {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Grupo de filtros */
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.filter-group select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.filter-group select:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.filter-group select option {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* Info de resultados */
+.table-info {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Ações dentro da tabela */
+.table-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Botões extra na tabela */
+.btn-success {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #15803d;
+}
+
+.btn-warning {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  background-color: #d97706;
+}
+
+/* Botões na tabela (dashboard) */
+.dashboard-page .btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVIDADE — TOOLBAR
+   ============================================================ */
+@media (max-width: 768px) {
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .filter-group {
+    justify-content: space-between;
+  }
+
+  .table-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* ============================================================
+   BADGES EXTRA
+   ============================================================ */
+.dashboard-page .badge-info {
+  background-color: rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.dashboard-page .badge-info::before {
+  content: "★ ";
+  font-size: 10px;
+}
+
+/* ============================================================
+   DETALHE — GRADE DE INFORMAÇÕES
+   ============================================================ */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.detail-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

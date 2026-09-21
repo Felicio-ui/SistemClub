@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubManager — Registar Clube</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div id="app-header"></div>
+    <div id="app-sidebar"></div>
+
+    <main class="app-main">
+
+        <!-- Cabeçalho da página -->
+        <div class="page-header">
+            <div>
+                <h1 class="app-main__title">Registar Clube</h1>
+                <p class="app-main__subtitle">Adicionar um novo clube à plataforma</p>
+            </div>
+            <div class="page-header__actions">
+                <a href="lista.html" class="btn btn-outline">← Voltar</a>
+            </div>
+        </div>
+
+        <!-- Formulário -->
+        <section class="card">
+            <form id="form-clube" class="form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do Clube *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Clube Desportivo de Maputo" required
+                            minlength="2" maxlength="150">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sigla">Sigla *</label>
+                        <input type="text" id="sigla" name="sigla" placeholder="Ex: CDM" required minlength="2"
+                            maxlength="20" style="text-transform: uppercase;">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dataFundacao">Data de Fundação</label>
+                        <input type="date" id="dataFundacao" name="dataFundacao">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="+258 84 123 4567" maxlength="30">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email do Clube</label>
+                    <input type="email" id="email" name="email" placeholder="geral@clube.mz">
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <textarea id="endereco" name="endereco" rows="3"
+                        placeholder="Av. Eduardo Mondlane, Maputo"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="logotipo">URL do Logótipo (opcional)</label>
+                    <input type="text" id="logotipo" name="logotipo" placeholder="https://... ou caminho local">
+                </div>
+
+                <!-- Mensagem de erro -->
+                <div id="form-erro" class="alert alert-danger" style="display: none;"></div>
+
+                <!-- Ações -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btn-submeter">
+                        Guardar Clube
+                    </button>
+                    <a href="lista.html" class="btn btn-outline">Cancelar</a>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script type="module" src="../../js/pages/clubes.js"></script>
+</body>
+
+</html>

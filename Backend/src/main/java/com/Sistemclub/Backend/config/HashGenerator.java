@@ -12,12 +12,7 @@ public class HashGenerator {
     CommandLineRunner gerarHash(PasswordEncoder encoder) {
         return args -> {
             String senha = "abrincadeir4";
-            String hash = encoder.encode(senha);
-
-            System.out.println("========================================");
-            System.out.println("SENHA: " + senha);
-            System.out.println("HASH:  " + hash);
-            System.out.println("========================================");
+            String hash = encoder.encode(senha); 
         };
     }
 }

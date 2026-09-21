@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubManager — Clubes</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div id="app-header"></div>
+    <div id="app-sidebar"></div>
+
+    <main class="app-main">
+
+        <!-- Cabeçalho da página -->
+        <div class="page-header">
+            <div>
+                <h1 class="app-main__title">Clubes</h1>
+                <p class="app-main__subtitle">Gestão de todos os clubes registados na plataforma</p>
+            </div>
+            <div class="page-header__actions">
+                <a href="registar.html" class="btn btn-primary">+ Novo Clube</a>
+            </div>
+        </div>
+
+        <!-- Card com pesquisa + tabela -->
+        <section class="card">
+
+            <!-- Barra de pesquisa e filtros -->
+            <div class="table-toolbar">
+                <div class="search-bar">
+                    <span class="search-bar__icon">🔍</span>
+                    <input type="text" id="pesquisa" placeholder="Pesquisar por nome ou sigla...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-estado">Estado:</label>
+                    <select id="filtro-estado">
+                        <option value="">Todos</option>
+                        <option value="Ativo">Ativos</option>
+                        <option value="Inativo">Inativos</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contador de resultados -->
+            <p class="table-info" id="table-info">A carregar...</p>
+
+            <!-- Tabela -->
+            <table class="table" id="tabela-clubes">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th>Nome</th>
+                        <th style="width: 100px;">Sigla</th>
+                        <th style="width: 120px;">Estado</th>
+                        <th style="width: 140px;">Data de Registo</th>
+                        <th style="width: 220px;" class="text-right">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="text-center">A carregar...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="../../js/pages/clubes-lista.js"></script>
+</body>
+
+</html>

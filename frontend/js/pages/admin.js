@@ -10,7 +10,7 @@ import { formatarData, escaparHTML, corDoEstado } from "../utils.js";
 // ===== 1. Verificar autenticação =====
 exigirAutenticacao();
 
-// ===== 2. Tornar o logout acessível =====
+// ===== 2. Tornar o logout acessível ao botão "Sair" =====
 window.sair = logout;
 
 // ===== 3. Data de hoje =====
@@ -48,14 +48,12 @@ async function carregarDashboard() {
     document.querySelector("#clubes-ativos").textContent = clubesAtivos.length;
     document.querySelector("#clubes-inativos").textContent = clubesInativos.length;
 
-    // Últimos 5 clubes
     const ultimosClubes = [...clubes]
       .sort((a, b) => new Date(b.criadoEm) - new Date(a.criadoEm))
       .slice(0, 5);
 
     renderizarTabelaClubes(ultimosClubes);
 
-    // Admins
     try {
       const admins = await apiRequest("/admins");
       document.querySelector("#total-admins").textContent = admins.length;
@@ -69,7 +67,7 @@ async function carregarDashboard() {
   }
 }
 
-// ===== 7. Tabela de clubes =====
+// ===== 7. Renderizar a tabela de clubes =====
 function renderizarTabelaClubes(clubes) {
   const tbody = document.querySelector("#tabela-clubes tbody");
 

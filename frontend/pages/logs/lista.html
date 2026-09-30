@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubManager — Logs de Auditoria</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div id="app-header"></div>
+    <div id="app-sidebar"></div>
+
+    <main class="app-main">
+
+        <!-- Cabeçalho -->
+        <div class="page-header">
+            <div>
+                <h1 class="app-main__title">Logs de Auditoria</h1>
+                <p class="app-main__subtitle">Histórico de todas as ações no sistema</p>
+            </div>
+            <div class="page-header__actions">
+                <button onclick="carregarLogs()" class="btn btn-outline">🔄 Atualizar</button>
+            </div>
+        </div>
+
+        <!-- Card com filtros e tabela -->
+        <section class="card">
+
+            <!-- Toolbar -->
+            <div class="table-toolbar">
+                <div class="search-bar">
+                    <span class="search-bar__icon">🔍</span>
+                    <input type="text" id="pesquisa" placeholder="Pesquisar nos detalhes...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-acao">Ação:</label>
+                    <select id="filtro-acao">
+                        <option value="">Todas</option>
+                        <option value="LOGIN">Login</option>
+                        <option value="CRIAR">Criar</option>
+                        <option value="EDITAR">Editar</option>
+                        <option value="APAGAR">Apagar</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contador -->
+            <p class="table-info" id="table-info">A carregar...</p>
+
+            <!-- Tabela -->
+            <table class="table" id="tabela-logs">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th style="width: 100px;">Ação</th>
+                        <th style="width: 140px;">Entidade</th>
+                        <th>Detalhes</th>
+                        <th style="width: 100px;">IP</th>
+                        <th style="width: 160px;">Data / Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="text-center">A carregar...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="../../js/pages/logs-lista.js"></script>
+</body>
+
+</html>

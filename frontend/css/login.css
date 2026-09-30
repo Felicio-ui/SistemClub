@@ -1,0 +1,338 @@
+/* ============================================================
+   CLUBMANAGER — LOGIN
+   ============================================================ */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 29, 53, 0.82),
+            rgba(10, 72, 45, 0.72)
+        ),
+        url("../assets/images/login.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.login-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+}
+
+
+.login-header__logo {
+    width: auto;
+    height: 64px;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.login-main {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* ============================================================
+   CARD DE LOGIN
+   ============================================================ */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 38px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.28);
+
+    color: #0f172a;
+}
+
+
+/* ============================================================
+   CABEÇALHO DO LOGIN
+   ============================================================ */
+
+.login-card__header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.login-card__header h1 {
+    margin-bottom: 7px;
+
+    color: #071d35;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.login-card__header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   FORMULÁRIO
+   ============================================================ */
+
+.login-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+
+.form-group select option {
+    background: #ffffff;
+
+    color: #0f172a;
+}
+
+
+/* ============================================================
+   AÇÕES
+   ============================================================ */
+
+.login-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 8px;
+}
+
+
+/* ============================================================
+   BOTÃO ENTRAR
+   ============================================================ */
+
+.btn-login {
+    min-width: 145px;
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px rgba(22, 163, 74, 0.25);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-login:hover {
+    background: #15803d;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(22, 163, 74, 0.32);
+}
+
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+   LINK
+   ============================================================ */
+
+.login-link {
+    color: #166534;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.login-link:hover {
+    color: #15803d;
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.login-footer {
+    padding: 18px 20px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .login-header {
+        padding: 18px;
+    }
+
+    .login-header__logo {
+        height: 52px;
+    }
+
+    .login-main {
+        padding: 20px 14px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+
+        border-radius: 14px;
+    }
+
+    .login-card__header h1 {
+        font-size: 24px;
+    }
+
+    .login-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .login-link {
+        text-align: center;
+    }
+}
